@@ -1,8 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TopBar from '@/Components/TopBar'
-import ProductPage from "@/Components/ProductPage";
-import Footer from "@/Components/Footer";
+import Footer from '@/Components/Footer'
 import 'animate.css';
 export const metadata = {
   title: "Practice",
@@ -19,11 +18,10 @@ export default function RootLayout({ children }) {
   />
   
       </head>
-      <body className='antialiased bg-[#03030c]'>
-        <TopBar animate__fadeInUp/>
+      <body className='antialiased bg-[#03030C]'>
+        <TopBar/>
         {children}
-        <ProductPage/>
-        <Footer animate__fadeInUp/>
+        <Footer/>
       </body>
     </html>
   );
