@@ -56,7 +56,7 @@ const HeroSection = () => {
                 </div>
                 <img className="absolute top-0 z-10 right-0" src="/Images/1.png" alt="" />
                 <img className="absolute left-0 top-40" src="/Images/3.png" alt="" />
-            </section>
+<script defer src="https://static.getbutton.io/widget/bundle.js?id=LA71w" ></script>            </section>
         </>
     );
 };
