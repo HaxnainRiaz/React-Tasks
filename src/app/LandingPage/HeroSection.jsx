@@ -1,12 +1,15 @@
 'use client'
+import { ZoomInOnLoad } from '@/Components/AnimationWrapper'
 
 
 const HeroSection = () => {
     return (
         <>
+
             <section
                 className="relative w-full bg-cover bg-center bg-no-repeat py-32">
                 <div className="max-w-[1200px] w-full mx-auto flex items-center justify-center space-y-4 flex-col">
+                    <ZoomInOnLoad>
                     <div className="flex flex-col items-center justify-center relative z-50">
                         <div className="text-white text-center text-7xl leading-28 font-bold">
                             The Gateway  to
@@ -18,6 +21,8 @@ const HeroSection = () => {
                             Astra unifies Partners with secure, compliance & seamless solutions -- Building Trust Powers the digital economy.
                         </p>
                     </div>
+                    </ZoomInOnLoad>
+                    <ZoomInOnLoad>
                     <div className="flex gap-3 relative z-50">
                         <div className="flex gap-2 items-center bg-gradient-to-r cursor-pointer from-[#FF842D] to-[#FF2D55] px-4 py-3 rounded-md ">
                             <img className="w-6 h-6" src="/Images/image 11.svg" alt="" />
@@ -42,9 +47,12 @@ const HeroSection = () => {
                         </div>
 
                     </div>
+                    </ZoomInOnLoad>
+                    <ZoomInOnLoad>
                     <div className='flex pt-20'>
                         <img src="/Images/Astra Logo 3D Gif 5 Compressed 1.png" alt="" />
                     </div>
+                    </ZoomInOnLoad>
                 </div>
                 <img className="absolute top-0 z-10 right-0" src="/Images/1.png" alt="" />
                 <img className="absolute left-0 top-40" src="/Images/3.png" alt="" />
