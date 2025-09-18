@@ -1,7 +1,6 @@
 'use client'
 import { ZoomInOnLoad } from '@/Components/AnimationWrapper'
-
-
+import React from 'react';
 const HeroSection = () => {
     return (
         <>
@@ -9,6 +8,8 @@ const HeroSection = () => {
             <section
                 className="relative w-full bg-cover bg-center bg-no-repeat py-32">
                 <div className="max-w-[1200px] w-full mx-auto flex items-center justify-center space-y-4 flex-col">
+                    <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+</div>
                     <ZoomInOnLoad>
                         <div className="flex flex-col items-center justify-center relative z-50">
                             <div className="text-white text-center text-7xl leading-28 font-bold">
