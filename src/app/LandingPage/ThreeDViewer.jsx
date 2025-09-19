@@ -65,7 +65,7 @@ function MarkerProjectionHelper({ marker, onProject }) {
 }
 
 // --- Twinkling stars ---
-function TwinklingStars({ count = 20000, minRadius = 40, maxRadius = 100 }) {
+function TwinklingStars({ count = 1000, minRadius = 60, maxRadius = 100 }) {
   const pointsRef = useRef();
 
   const [positions, colors, phases, factors, speeds] = useMemo(() => {
@@ -79,7 +79,7 @@ function TwinklingStars({ count = 20000, minRadius = 40, maxRadius = 100 }) {
       new THREE.Color(0xffffff), // white
       new THREE.Color(0xfcf2e3), // soft yellow
       new THREE.Color(0xfae7c0), // yellow-orange
-      new THREE.Color(0xfcc2c2), // red-ish
+      new THREE.Color(0xfce1e1), // red-ish
       new THREE.Color(0xdbedff), // bluish
     ];
 
@@ -175,7 +175,7 @@ function RotatingEarth({ setHoveredMarker, setSelectedMarker }) {
   ];
 
   const markers = markerPositions.map((marker) => {
-    const vec = new THREE.Vector3(...marker.raw).normalize().multiplyScalar(globeRadius + 2.05);
+    const vec = new THREE.Vector3(...marker.raw).normalize().multiplyScalar(globeRadius + 0.55);
     return { ...marker, position: [vec.x, vec.y, vec.z] };
   });
 
@@ -189,7 +189,7 @@ function RotatingEarth({ setHoveredMarker, setSelectedMarker }) {
 
   return (
     <group ref={globeRef}>
-      <EarthModel scale={0.08} />
+      <EarthModel scale={0.05} />
       <lineSegments>
         <bufferGeometry attach="geometry" setFromPoints={linePoints} />
         <lineBasicMaterial color="cyan" transparent opacity={0.4} />
